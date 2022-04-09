@@ -1,6 +1,6 @@
 import React from 'react';
 
-function postInput(){
+function PostInput(){
     
     return(
      <div>
@@ -24,3 +24,5 @@ function postInput(){
 
     )
 }
+
+export default PostInput;

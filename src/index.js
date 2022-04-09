@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 //import { createStore } from 'redux';
 import App from './App.jsx';
-import store from './store';
+import store from './store.js';
 import axios from 'axios'
 
 //const store = createStore('../reducers/index')
@@ -16,5 +16,5 @@ render(
   <App/>
 </Provider>
 </BrowserRouter>,
-document.getElementById('app'),
+document.querySelector('#root')
 );

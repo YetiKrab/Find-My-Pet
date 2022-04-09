@@ -36,6 +36,3 @@ function MainContainer (props) {
 export default connect(mapStateToProps, mapDispatchToProps)(MainContainer);
 
 
-
-if (props.searchOrPost === 'search') return <Search />
-    return <Display />
