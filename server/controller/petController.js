@@ -2,7 +2,7 @@ const db = require('../model/petModel');
 
 const petController = {};
 
-// query the SQL database for the zipcode, title, content, eventType, and date for all posts with the zipcode the matches the zipcode passed in req.params
+// query the SQL database for the zipcode, title, content, eventtype, contactinfo, and date for all posts with the zipcode the matches the zipcode passed in req.params
 petController.getPosts = async (req, res, next) => {
 
   const zipcode = [req.params.zipcode];
@@ -22,7 +22,7 @@ petController.getPosts = async (req, res, next) => {
   }
 };
 
-//query the SQL database and add a post with zipcode, title, content, eventType with the passed in values from req.body
+//query the SQL database and add a post with zipcode, title, content, eventtype, contact info, date with the passed in values from req.body
 petController.addPost = async (req, res, next) => {
   //generates a new date at the time of the request query
   const now = new Date();
