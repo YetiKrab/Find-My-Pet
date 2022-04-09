@@ -6,8 +6,8 @@ CREATE TABLE posts (
   "zipcode" varchar NOT NULL,
   "title" varchar (100),
   "content" varchar (500),
-  "eventType" varchar,
-  "contactInfo" varChar,
-  "date" DATE;
+  "eventtype" varchar,
+  "contactinfo" varChar,
+  "date" varchar
 
 )
