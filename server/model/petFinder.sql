@@ -2,11 +2,12 @@
 
 
 CREATE TABLE posts (
-  "_id" serial NOT NULL,
+  "_id" SERIAL PRIMARY KEY NOT NULL,
   "zipcode" varchar NOT NULL,
   "title" varchar (100),
   "content" varchar (500),
   "eventType" varchar,
-  "date" datetime default CURRENT_TIMESTAMP;
+  "contactInfo" varChar,
+  "date" DATE;
 
 )
