@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -7,7 +8,7 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
   },
-  plugins: [new HtmlWebpackPlugin({template: './main.html'})],
+  plugins: [new HtmlWebpackPlugin({template: './client/index.html'})],
 
   devServer: {
     // need public path : build, directory (current path + build) - specifies where in memory the dev server is running

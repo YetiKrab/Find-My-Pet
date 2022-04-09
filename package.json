@@ -8,6 +8,7 @@
     "babel-loader": "^8.2.4",
     "css-loader": "^6.7.1",
     "express": "^4.17.3",
+    "html-webpack-plugin": "^5.5.0",
     "node": "^17.7.2",
     "nodemon": "^2.0.15",
     "pg": "^8.7.3",
@@ -30,7 +31,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/server.js",
     "build": "NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development webpack serve --open & npm run start"
+    "dev": "NODE_ENV=development webpack serve --open & nodemon server/server.js"
   },
   "repository": {
     "type": "git",

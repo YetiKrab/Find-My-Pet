@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = 3000;
@@ -16,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use('')
 
 // route handlers
-// app.use('/', petRouter);
+app.use('/pet', petRouter);
 
 // route handler to respond with main app
 app.get('/', (req, res) => {
@@ -26,7 +27,7 @@ app.get('/', (req, res) => {
 });
 
 // route handler for any requests to unknown route
-app.use((req, res) => res.sendStatus(404));
+app.use((req, res) => res.status(404).send('uh oh'));
 
 // express global error handler
 app.use((err, req, res, next) => {
