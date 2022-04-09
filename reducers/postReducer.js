@@ -1,4 +1,4 @@
-import * as types from '../actions/actionTypes';
+import * as types from '../actions/actionType';
 
 const initialState = {
     zip : '',
@@ -24,8 +24,8 @@ const postReducer = (state = initialState, action) => {
         return {
             ...state,
             zip: action.payload,
-          };}
-         }
+          }}
+         
     
          case types.INPUT_TITLE:{
         

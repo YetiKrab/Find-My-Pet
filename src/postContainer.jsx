@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import Post from './post'
 
-
-function postContainer({posts}){
+function PostContainer({posts}){
 
   //create loop to populate posts
 
@@ -12,3 +12,5 @@ function postContainer({posts}){
     </div>
   )
 }
+
+export default PostContainer;
