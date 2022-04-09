@@ -1,4 +1,3 @@
-
 const express = require('express');
 const path = require('path');
 
@@ -11,11 +10,13 @@ const apiRouter = require('./routes/api.js');
 
 // parse incoming request body
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// express static
+// express static - using if we decide on images
+// app.use('')
 
 // route handlers
-// app.use('/')
+// app.use('/', petRouter);
 
 // route handler to respond with main app
 app.get('/', (req, res) => {
@@ -45,4 +46,3 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
-
