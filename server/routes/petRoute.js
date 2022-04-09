@@ -14,7 +14,7 @@ router.post('/', petController.addPost, petController.getPosts, (req, res) => {
 });
 
 // deleting route handler
-router.delete('/', petController.deletePost, (req, res) => {
+router.delete('/', petController.deletePost, petController.getPosts, (req, res) => {
   return res.status(200).json(res.locals.delete);
 });
 
