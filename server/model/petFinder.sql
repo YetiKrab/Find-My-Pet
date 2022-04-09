@@ -2,7 +2,7 @@
 
 
 CREATE TABLE posts (
-  "_id" serial NOT NULL,
+  "_id" SERIAL PRIMARY KEY NOT NULL,
   "zipcode" varchar NOT NULL,
   "title" varchar (100),
   "content" varchar (500),
