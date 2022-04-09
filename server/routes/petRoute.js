@@ -10,7 +10,7 @@ router.get('/', petController.getPosts, (req, res) => {
 
 // posting route handler
 router.post('/', petController.addPost, petController.getPosts, (req, res) => {
-  return res.status(201).json(res.locals.posts);
+  return res.status(200).json(res.locals.posts);
 });
 
 // deleting route handler

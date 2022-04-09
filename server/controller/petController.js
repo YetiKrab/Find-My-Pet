@@ -26,17 +26,18 @@ petController.getPosts = async (req, res, next) => {
 //query the SQL database and add a post with zipcode, title, content, eventtype, contact info, date with the passed in values from req.body
 petController.addPost = async (req, res, next) => {
   //generates a new date at the time of the request query
-  const now = new Date();
+  const now = new Date().toString();
+  console.log('this is the current date', now);
   // NOTE THIS IS USING REQ.BODY -- FIGURE OUT WHAT ENDPOINT IS GOING TO BE USED
-  const {zipcode, title, content, eventType, contactInfo} = req.body;
-  const toAdd = [zipcode, title, content, eventType, contactInfo, now];
+  const {zipcode, title, content, eventtype, contactinfo} = req.body;
+  const toAdd = [zipcode, title, content, eventtype, contactinfo, now];
   //to note: $1 will match with zipcode, $2 will match with title, etc.
   //this is done to scrub and sanitize our inputs and prevent injections into our SQL database --> called parameterized queries
 
-  const query = 'INSERT INTO posts ("zipcode", title", "content", "eventtype", "contactinfo", "date") VALUES ($1 $2 $3 $4 $5 $6)';
+  const query = 'INSERT INTO posts("zipcode", "title", "content", "eventtype", "contactinfo", "date") VALUES($1, $2, $3, $4, $5, $6)';
   try{
     const result = await db.query(query, toAdd); //don't need to add anything in res.locals since simply adding a post to the database, no need to return anything to client
-    //console.log('the result that is returned after query: ', result)
+    // console.log('the result that is returned after query: ', result)
     return next();
   } catch(err){
       console.log('error at petController.addPost');
