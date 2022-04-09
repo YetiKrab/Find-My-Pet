@@ -5,14 +5,14 @@ const petController = {};
 // query the SQL database for the unique _id, zipcode, title, content, eventtype, contactinfo, and date for all posts with the zipcode the matches the zipcode passed in req.params
 petController.getPosts = async (req, res, next) => {
   // NOTE THIS IS USING REQ.PARAMS -- FIGURE OUT WHAT ENDPOINT IS GOING TO BE USED
-  const zipcode = [req.params.zipcode];
+  const zipcode = [req.body.zipcode];
   const query = 'SELECT _id, zipcode, title, content, "eventtype", "contactinfo", date FROM posts WHERE posts.zipcode=$1';
 
   try {
     const result = await db.query(query, zipcode);
     //not sure what the result is going to look like yet? 
     //console.log('the result that is returned after query: ', result)
-    res.locals.posts = result.rows; //rows should be an array of objects --> [{zipcode: zipcode1, title: title1, content: content1, eventType: eventtype1}, {zipcode: zipcode2, title: title2, content: content2, eventType: eventtype2}, ...etc]
+    res.locals.posts = result.rows; //rows should be an array of objects --> [{_id: id1, zipcode: zipcode1, title: title1, content: content1, eventType: eventtype1}, {zipcode: zipcode2, title: title2, content: content2, eventType: eventtype2}, ...etc]
     return next();
   } catch(err){
       console.log("error at petController.getPosts: ", err);
