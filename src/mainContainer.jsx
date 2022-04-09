@@ -22,8 +22,8 @@ const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
 
 function MainContainer (props) {
     let inputEvent;
-    if (props.searchOrPost === 'search') inputEvent = <Search />
-      else inputEvent = <PostInput />;
+    if (props.searchOrPost === 'search') inputEvent = <Search zip = {props.zip} searchZip = {props.searchZip} update = {props.updateZip}/>
+      else inputEvent = <PostInput {...props} />;
     return (
     <div className="container">
       {inputEvent}
@@ -36,6 +36,3 @@ function MainContainer (props) {
 export default connect(mapStateToProps, mapDispatchToProps)(MainContainer);
 
 
-
-if (props.searchOrPost === 'search') return <Search />
-    return <Display />

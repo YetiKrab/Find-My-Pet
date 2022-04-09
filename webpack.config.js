@@ -3,12 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV,
-  entry: './client/index.js',
+  entry: path.resolve(__dirname, './src/index.js'),
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.join(__dirname, '/build'),
     filename: 'bundle.js',
   },
-  plugins: [new HtmlWebpackPlugin({template: './client/index.html'})],
+  plugins: [new HtmlWebpackPlugin({template: './src/index.html'})],
 
   devServer: {
     // need public path : build, directory (current path + build) - specifies where in memory the dev server is running
@@ -26,12 +26,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /jsx?$/,
+        test: /\.(js|jsx)$/,    
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/env', '@babel/react'],
-          plugins: ['@babel/plugin-transform-runtime', '@babel/transform-async-to-generator'],
+          presets: ['@babel/env', '@babel/react']
         },
       },
       {
