@@ -7,6 +7,6 @@ CREATE TABLE posts (
   "title" varchar (100),
   "content" varchar (500),
   "eventType" varchar,
-  "date" DATE,
+  "date" datetime default CURRENT_TIMESTAMP;
 
 )
