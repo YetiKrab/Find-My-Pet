@@ -1,0 +1,163 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+//   background-color: antiquewhite;
+}
+#title{
+    font-size: xx-large;
+}
+#id{
+    text-align : center;
+}
+body {
+  font-family: 'Roboto', 'Ariel', sans-serif;
+  font-size: 16px;
+}
+
+// main container 
+#app {
+  display: flex;
+  flex-direction: column;
+  
+  width: 100vw;
+}
+
+#searchContainer #searchAndButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: $background-color;
+    font-size: 16px;
+    
+}
+.searchBtn {
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-size: 16px;
+    font-weight:300;
+    color: $primary-light;
+    background-color: $secondary-color;
+    text-align:center;
+    transition: all 0.2s;
+}
+#btnPostCreator{
+    
+    // background-color: $background-color;
+    width: 50%;
+    align-self: center;
+    
+    
+}
+.srchbtn{
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:$primary-light;
+    background-color:$primary-color;
+    text-align:center;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+#searchContainer{
+    width : 90%;
+    height: 150px;
+    margin-left: 5%;
+    border: 2px solid $primary-grey-lt;
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+      
+    border-radius: 20px;
+}
+
+#searchBar
+{
+font-size: 16px;
+padding: 0 10px;
+}
+
+// post container
+// .postContainer {
+
+// }
+.postContainer{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 5%;
+    height: 700px;
+    border: 2px solid $primary-dark;
+    overflow: auto;
+    background-color: $background-color;
+    border-radius: 25px;
+}
+.post{
+    width: 100%;
+border: 2px solid $primary-dark;
+}
+
+#postInput{
+    width : 90%;
+    height: 150px;
+    margin-left: 5%;
+    border: 2px solid $primary-grey-lt;
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+#topGroup{
+    
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $background-color;
+}
+#contentbar{
+    background-color: $background-color;
+    width : 90%;
+    margin-left: 5%;
+    
+    
+}
+#postBar{
+    align-self: center;
+}
+#postbtn{
+    display:inline-block;
+    padding:4p;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-size: 16px;
+    font-weight:300;
+    color:$primary-light;
+    background-color: $primary-color;
+    text-align:center;
+    transition: all 0.2s;
+    width: 90%;
+    margin-left: 5%;
+}
