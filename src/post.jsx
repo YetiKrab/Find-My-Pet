@@ -1,6 +1,6 @@
 import React from 'react';
 
-function posts({props}){
+function Posts({props}){
 
 const { typeLost, title, content, contact, date } = props;
 //type of post determines style color of div
@@ -19,3 +19,5 @@ const { typeLost, title, content, contact, date } = props;
   )
 
 }
+
+export default Posts;

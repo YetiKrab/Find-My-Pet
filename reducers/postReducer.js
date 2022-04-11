@@ -16,7 +16,7 @@ const initialState = {
     // postDate : '',
 };
 
-const postReducer = async (state = initialState, action) => {
+const postReducer = (state = initialState, action) => {
     let post;
     switch (action.type) {
       case types.INPUT_ZIP:{
@@ -60,49 +60,50 @@ const postReducer = async (state = initialState, action) => {
             searchOrPost: 'post'
           }
         }
-       
-     
+        
       case types.SEARCH_ZIP:{
       //dispatched from get
-        const response = await axios.request({
-          method: 'GET',
-          url: '/pet',
-          headers: {'Content-Type' : 'application/json'},
-          params: {
-            zipcode: state.zipcode
-          }
-        });
-        console.log('this is the response from the server: ', response);
-        return {
-          ...state,
-          posts: response
-        }
+        // const response = await axios.request({
+        //   method: 'GET',
+        //   url: '/pet',
+        //   headers: {'Content-Type' : 'application/json'},
+        //   params: {
+        //     zipcode: state.zipcode
+        //   }
+        // });
+        // console.log('this is the response from the server: ', response);
+        // return {
+        //   ...state,
+        //   posts: response
+        // }
+        break;
       }
         //make a post button action type
 
       case types.CREATE_POST:{
       //dispatched from post
-        const response = await axios.request({
-          method: 'POST',
-          url: '/pet',
-          headers: {'Content-Type' : 'application.json'},
-          data: {
-            zipcode: state.zip,
-            title: state.title,
-            content: state.content,
-            contactinfo: state.contactinfo,
-          }
-        });
-        console.log('this is the response from the server', response);
-        return {
-          ...state,
-          zipcode: '',
-          title: '',
-          content: '',
-          contactinfo: '',
-          posts: response
+        // const response = await axios.request({
+        //   method: 'POST',
+        //   url: '/pet',
+        //   headers: {'Content-Type' : 'application.json'},
+        //   data: {
+        //     zipcode: state.zip,
+        //     title: state.title,
+        //     content: state.content,
+        //     contactinfo: state.contactinfo,
+        //   }
+        // });
+        // console.log('this is the response from the server', response);
+        // return {
+        //   ...state,
+        //   zipcode: '',
+        //   title: '',
+        //   content: '',
+        //   contactinfo: '',
+        //   posts: response
 
-        }
+        // }
+        break;
       }
       default: {
         return state
