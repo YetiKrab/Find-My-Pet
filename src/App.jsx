@@ -8,8 +8,8 @@ import { Link } from "react-router-dom"
 const App = () => (
     <div id="app">
      
-    <MainContainer />
-  </div>
+      <MainContainer />
+    </div>
 );
 
 export default App;

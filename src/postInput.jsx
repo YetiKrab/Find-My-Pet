@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PostInput(){
+function PostInput(props){
     
     return(
      <div>
