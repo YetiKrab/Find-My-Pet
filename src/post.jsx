@@ -11,10 +11,10 @@ function Post({ title, content, contact, date, id, eventtype}){
   return (
     <div className="post" style={{backgroundColor: postColor}}>
       {/* <p className="lostOrFound" value={eventtype}>THIS PET IS: {eventtype}</p> */}
-      <h3 className="postTitle" value={title}>{title} </h3>
-      <p className="postContent" value={content}>{content}</p>
-      <p className="contact" value={contact}>Contact Info: {contact}</p>
-      <p className="postDate" value={date}>Date: {date}</p>
+      <h3 className="postTitle" value={title}>{title} </h3> <br />
+      <p className="postContent" value={content}>{content}</p> <br />
+      <p className="contact" value={contact}>Contact Info: {contact}</p> <br />
+      <p className="postDate" value={date}>Date: {date}</p> <br />
     </div>
   )
 

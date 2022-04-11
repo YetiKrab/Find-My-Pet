@@ -32,7 +32,7 @@ function Search(props){
             <button className="searchBtn" onClick={(e) => searchFunc(e)}>Search Area for Lost and Found Pets!</button> 
         </div>
         <div id = "btnPostCreator">
-        <button  type = "button" className="srchbtn" onClick={props.postButton}>Create a Lost or Found Post!!!</button> 
+        <button  type = "button" className="postbtn" onClick={props.postButton}>Create a Lost or Found Post!!!</button> 
         </div>
       
 
