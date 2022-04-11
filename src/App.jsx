@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 const App = () => (
     <div id="app">
-     <div id = "test" ><b id ="title">Dude, Where's my pet? </b> </div>
+     <div id = "test" ><b id ="title">Dude, Where's my Yeti Krab? </b> </div>
       <MainContainer />
     </div>
 );
