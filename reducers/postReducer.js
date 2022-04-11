@@ -7,6 +7,7 @@ const initialState = {
     typeLost : false,
     content : '',
     title : '',
+    date : '',
     posts : [],
     eventtype : ''
     // postZip : '',
@@ -22,28 +23,45 @@ const postReducer = async (state = initialState, action) => {
         return {
             ...state,
             zip: action.payload,
-          }}
+
+          }
+        }
       case types.INPUT_TITLE:{
-        return {
-          ...state,
-          title: action.payload,
-        }
-      }
+           return {
+             ...state,
+             title: action.payload,
+           }
+          }
       case types.INPUT_CONTENT:{
-        return {
-          ...state,
-          content: action.payload,
+          return {
+            ...state,
+            content: action.payload,
+          }
         }
-      }
-      case types.INPUT_CONTACT:{
-        return{
-          ...state,
-          contactinfo: action.payload
+
+        case types.INPUT_CONTACT:{
+          return {
+            ...state,
+            input: action.payload,
+          }
+        
         }
-      }
-      case types.LOST_OR_FOUND:{
-        break;
-      }
+        case types.LOST_OR_FOUND:{
+          return {
+            ...state,
+            typeLost: action.payload,
+          }
+        
+        }
+        //make a post button action type
+        case types.POST_BUTTON_CLICK:{
+          return {
+            ...state,
+            searchOrPost: 'post'
+          }
+        }
+       
+     
       case types.SEARCH_ZIP:{
       //dispatched from get
         const response = await axios.request({
@@ -83,6 +101,7 @@ const postReducer = async (state = initialState, action) => {
           content: '',
           contactinfo: '',
           posts: response
+
         }
       }
       default: {
