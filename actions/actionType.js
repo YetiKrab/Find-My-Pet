@@ -5,3 +5,5 @@ export const INPUT_CONTACT ='INPUT_CONTACT';
 export const LOST_OR_FOUND = 'LOST_OR_FOUND';
 export const SEARCH_ZIP = 'SEARCH_ZIP';
 export const CREATE_POST = 'CREATE_POST';
+export const SEARCH_BUTTON_CLICK = 'SEARCH_BUTTON_CLICK';
+export const POST_BUTTON_CLICK = 'POST_BUTTON_CLICK';

@@ -15,7 +15,7 @@ function PostInput(){
                 <option value="found">Found</option>
                 <option value="lost">Lost</option>
             </select>
-            <button type = "submitPost">Search Area for Lost and Found Fets!</button> 
+            <button type = "submitPost" onClick={props.createPost}>Create a Lost or Found Post!!!</button> 
         </form>
         
 

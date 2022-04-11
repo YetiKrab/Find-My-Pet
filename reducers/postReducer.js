@@ -6,6 +6,7 @@ const initialState = {
     typeLost : false,
     content : '',
     title : '',
+    date : '',
     posts : [],
     searchOrPost : 'search'
     // postZip : '',
@@ -24,29 +25,53 @@ const postReducer = (state = initialState, action) => {
         return {
             ...state,
             zip: action.payload,
-          }}
-         
-    
-         case types.INPUT_TITLE:{
-        
+          }
         }
-
-        case types.INPUT_CONTENT:{
-        
+      case types.INPUT_TITLE:{
+           return {
+             ...state,
+             title: action.payload,
+           }
+          }
+      case types.INPUT_CONTENT:{
+          return {
+            ...state,
+            content: action.payload,
+          }
         }
 
         case types.INPUT_CONTACT:{
+          return {
+            ...state,
+            input: action.payload,
+          }
         
         }
         case types.LOST_OR_FOUND:{
+          return {
+            ...state,
+            typeLost: action.payload,
+          }
         
         }
-        case types.SEARCH_ZIP:{
-        //dispatched from get
-        }
         //make a post button action type
-
+        case types.POST_BUTTON_CLICK:{
+          return {
+            ...state,
+            searchOrPost: 'post'
+          }
+        }
+        case types.SEARCH_ZIP:{
+          return {
+            ...state,
+            //posts: info from get req?
+          }
+        }
         case types.CREATE_POST:{
+          return {
+            ...state,
+
+          }
         //dispatched from post
         }
 
