@@ -1,37 +1,48 @@
 @import 'variables';
 
 * {
-    font-family: Roboto;
+ font-family: Roboto;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-//   background-color: antiquewhite;
     ::-webkit-scrollbar{
         width: 0;
     }
 }
 
+
+
+
+
+git 
 #title{
-    margin: 20px 10px;
-    font-size: xx-large;
+
+    font-size: 7vw;
+    // font-style: ;
 }
 #test{
-    margin: 20px 10px;
+    margin: 20px 0px;
     text-align : center;
 }
 
 body {
   font-family: 'Roboto', 'Ariel', sans-serif;
   font-size: 16px;
-  margin: 20px 10px;
+    overflow-y: hidden;
 }
 
 // main container 
-#app {
+#root {
   display: flex;
   flex-direction: column;
   
   width: 100vw;
+
+  
+    position: relative; 
+    background: url('../assets/ana-do-amaral-hdd0StA8kic-unsplash.jpg') no-repeat center center fixed; 
+    background-size: cover;
+
 }
 
 #searchContainer #searchAndButton{
@@ -42,7 +53,6 @@ body {
     margin-top: 1vw;
     margin-left: 15vw;
     margin-right: 15vw;
-    background-color: $background-color;
     font-size: 16px;
     
 }
@@ -57,23 +67,24 @@ body {
     font-size: 16px;
     font-weight:300;
     color: $primary-light;
-    background-color: $secondary-color;
+    background-color: $primary-color;
     text-align:center;
     transition: all 0.2s;
+    :hover{
+        cursor: pointer;
+    }
 }
 #btnPostCreator{
-    
-    // background-color: $background-color;
     width: 50vw;
+    height: 50px;
     align-self: center;
-    
-    
 }
 .postbtn{
     display:inline-block;
     padding:0.3em 1.2em;
     margin:0 0.3em 0.3em 0;
     border-radius:2em;
+    font-size: 16px;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
@@ -83,24 +94,29 @@ body {
     text-align:center;
     transition: all 0.2s;
     width: 100%;
+    :hover{
+        cursor: pointer;
+    }
 }
 
 #searchContainer{
     width : 90%;
     height: 10vw;
     margin-left: 5%;
-    //border: 2px solid $primary-grey-lt;
     display: flex;
     flex-direction: column;
-    background-color: $background-color;
-      
     border-radius: 5px;
+
+    :focus {
+        outline: none;
+        }
 }
 
 #searchBar
 {
-font-size: 16px;
-padding: 0 10px;
+    font-size: 16px;
+    padding: 0 10px;
+    
 }
 
 // post container
@@ -116,7 +132,7 @@ padding: 0 10px;
     height: 40vw;
     //border: 2px solid $primary-dark;
     overflow: auto;
-    background-color: $background-color;
+    // background-color: $background-color;
     border-radius: 5px;
 }
 .post{
@@ -130,13 +146,13 @@ padding: 0 10px;
 }
 
 #postInput{
-    width : 90%;
+    width : 70%;
     height: 150px;
-    margin-left: 5%;
-    border: 2px solid $primary-grey-lt;
+    margin-left: 15%;
+     border: 2px solid $primary-grey-lt;
     display: flex;
     flex-direction: column;
-    background-color: $background-color;
+     background-color: $background-color;
     justify-content: space-around;
     border-radius: 20px;
 }
@@ -146,12 +162,12 @@ padding: 0 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: $background-color;
+    // background-color: $background-color;
 }
 #contentbar{
-    background-color: $background-color;
+    // background-color: $background-color;
     width : 90%;
-    margin-left: 5%;
+    margin-left: 8.5vw;
     
     
 }

@@ -5,8 +5,8 @@ function Post({ title, content, contact, date, id, eventtype}){
 //const { typeLost, title, content, contact, date } = props;
 //type of post determines style color of div
   let postColor;
-  if (eventtype === "found") postColor = '#b2ef91';
-  else postColor = '#FF9292';
+  if (eventtype === "found") postColor = '#74b79d';
+  else postColor = '#e8a598';
     
   return (
     <div className="post" style={{backgroundColor: postColor}}>

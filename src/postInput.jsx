@@ -30,10 +30,10 @@ function PostInput(props){
     return(
      <div id='postInput'>
            <div id = "topGroup">
-            <input id="postTitle" onChange={e => props.updateTitle(e.target.value)} placeholder="Provide a post title" type="text" size="20"></input>
-            <input id = "zipBar" onChange={e => props.updateZip(e.target.value)} placeholder = "Zip code" type="text" size = "10"></input>
-            <input id = "infoBar" onChange={e => props.updateContact(e.target.value)} placeholder = "Please provide contact info" type="text" size = "30"></input>
-            <select id="menuLF" onChange={e => props.updatePostType(e.target.value)}>
+            <input id="postTitle" onChange={e => props.updateTitle(e.target.value)} placeholder="Provide a post title" type="text" size="20" required></input>
+            <input id = "zipBar" onChange={e => props.updateZip(e.target.value)} placeholder = "Zip code" type="text" size = "10" required></input>
+            <input id = "infoBar" onChange={e => props.updateContact(e.target.value)} placeholder = "Please provide contact info" type="text" size = "30" required></input>
+            <select id="menuLF" onChange={e => props.updatePostType(e.target.value)} required>
                 <option value="found">Found</option>
                 <option value="lost">Lost</option>
             </select>

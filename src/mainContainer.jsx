@@ -37,6 +37,7 @@ function MainContainer (props) {
       else inputEvent = <PostInput {...props} />;
 
     return (
+    <div c></div>
     <div className="container">
       {inputEvent}
       <PostContainer posts={props.posts} /> 
