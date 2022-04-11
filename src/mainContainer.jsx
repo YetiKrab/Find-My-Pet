@@ -32,16 +32,16 @@ function MainContainer (props) {
   console.log('these are props in maincontainer', props)
   //if inputEvent is search we display a search field
     let inputEvent;
-    if (props.searchOrPost === 'search') inputEvent = <Search zip = {props.zip} searchZip = {props.searchZip} updateZip = {props.updateZip} postButton={props.postButton}/>
+    if (props.searchOrPost === 'search') inputEvent=<Search zip = {props.zip} searchZip = {props.searchZip} updateZip = {props.updateZip} postButton={props.postButton}/>
     // otherwise we show a post input field
       else inputEvent = <PostInput {...props} />;
 
     return (
-    <div c></div>
-    <div className="container">
-      {inputEvent}
-      <PostContainer posts={props.posts} /> 
-    </div>
+      <div className="container">
+        <p className="about">Have you lost or found a pet? We can help! If you've lost a pet, please enter your zip code below to check and see if someone has already found it. If you don't see it there yet, feel free to post so that our community can keep an eye out. Green posts are found and red posts are lost.</p>
+        {inputEvent}
+        <PostContainer posts={props.posts} /> 
+      </div>
     )
   }
 
