@@ -60,8 +60,7 @@ const postReducer = async (state = initialState, action) => {
             searchOrPost: 'post'
           }
         }
-       
-     
+        
       case types.SEARCH_ZIP:{
       //dispatched from get
         const response = await axios.request({
