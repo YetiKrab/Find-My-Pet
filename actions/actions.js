@@ -33,6 +33,7 @@ export const createPost = data => ({
   payload: data,
 })
 
-export const postButton = () => ({
-    type: types.POST_BUTTON_CLICK
+export const postButton = data => ({
+    type: types.POST_BUTTON_CLICK,
+    payload: data
 })
