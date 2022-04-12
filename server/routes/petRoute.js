@@ -4,7 +4,7 @@ const petController = require('../controller/petController');
 const router = express.Router();
 
 // data request route handler
-router.get('/', petController.getPosts, (req, res) => {
+router.get('/:zip', petController.getPosts, (req, res) => {
   return res.status(200).json(res.locals.posts);
 });
 

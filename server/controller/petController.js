@@ -5,7 +5,8 @@ const petController = {};
 // query the SQL database for the unique _id, zipcode, title, content, eventtype, contactinfo, and date for all posts with the zipcode the matches the zipcode passed in req.params
 petController.getPosts = async (req, res, next) => {
   // NOTE THIS IS USING REQ.PARAMS -- FIGURE OUT WHAT ENDPOINT IS GOING TO BE USED
-  const zipcode = [req.body.zipcode];
+  const zipcode = [req.body.zipcode || req.params.zip];
+  console.log('this is the zip', zipcode);
   const query = 'SELECT _id, zipcode, title, content, "eventtype", "contactinfo", date FROM posts WHERE posts.zipcode=$1';
 
   try {

@@ -1,21 +1,21 @@
 import * as types from '../actions/actionType';
+import axios from 'axios';
 
 const initialState = {
     zip : '',
-    contact : '',
+    contactinfo : '',
     typeLost : false,
     content : '',
     title : '',
+    date : '',
     posts : [],
-    searchOrPost : 'search'
+    eventtype : '',
+    searchOrPost: 'search',
     // postZip : '',
     // postContent : '',
     // postEvent : '',
     // postDate : '',
-
-
 };
-
 
 const postReducer = (state = initialState, action) => {
     let post;
@@ -24,41 +24,76 @@ const postReducer = (state = initialState, action) => {
         return {
             ...state,
             zip: action.payload,
-          }}
-         
-    
-         case types.INPUT_TITLE:{
-        
-        }
 
-        case types.INPUT_CONTENT:{
-        
+          }
+        }
+      case types.INPUT_TITLE:{
+           return {
+             ...state,
+             title: action.payload,
+           }
+          }
+      case types.INPUT_CONTENT:{
+          return {
+            ...state,
+            content: action.payload,
+          }
         }
 
         case types.INPUT_CONTACT:{
+          return {
+            ...state,
+            contactinfo: action.payload,
+          }
         
         }
         case types.LOST_OR_FOUND:{
+          return {
+            ...state,
+            eventtype: action.payload,
+          }
         
         }
-        case types.SEARCH_ZIP:{
-        //dispatched from get
+        //make a post button action type
+        case types.POST_BUTTON_CLICK:{
+          return {
+            ...state,
+            searchOrPost: action.payload
+          }
         }
+        
+      case types.SEARCH_ZIP:{
+
+        return {
+          ...state,
+          zipcode: '',
+          title: '',
+          content: '',
+          contactinfo: '',
+          eventtype: '',
+          posts: action.payload
+        }
+        break;
+      }
         //make a post button action type
 
-        case types.CREATE_POST:{
-        //dispatched from post
+      case types.CREATE_POST:{
+      //dispatched from post
+
+        return {
+          ...state,
+          zipcode: '',
+          title: '',
+          content: '',
+          contactinfo: '',
+          eventtype: '',
+          posts: action.payload
         }
-
-
-
-      
-      
-  
-    default: {
+        break;
+      }
+      default: {
         return state
       }
     }
   };
-  
   export default postReducer;
