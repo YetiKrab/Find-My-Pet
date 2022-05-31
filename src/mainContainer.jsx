@@ -25,7 +25,6 @@ const mapStateToProps = ( state ) => {
   }
 }
 
-
 const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
 
 function MainContainer (props) {
