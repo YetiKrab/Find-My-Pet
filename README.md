@@ -1,25 +1,10 @@
-# petfinder
+# Find My Pet
 
- "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "@reduxjs/toolkit": "^1.8.1",
-    "axios": "^0.26.1",
-    "babel": "^6.23.0",
-    "babel-loader": "^8.2.4",
-    "css-loader": "^6.7.1",
-    "express": "^4.17.3",
-    "html-webpack-plugin": "^5.5.0",
-    "pg": "^8.7.3",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-redux": "^7.2.8",
-    "react-router-dom": "^6.3.0",
-    "redux": "^4.1.2",
-    "redux-devtools-extension": "^2.13.9",
-    "sass": "^1.50.0",
-    "sass-loader": "^12.6.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.8.1"
+A quick and easy way to invoke the help of your community when it comes to finding your lost pet! We know that finding a lost pet can be devastating and stressful. Allow Find My Pet to help you in these stressing times. 
+
+We also know you may be at a loss for words when you find a lost pet. Who's dog is it? Well, now Find My Pet gives you a way to list a pet you may have found on an easy to use, interactive application in order to facilitate a pet reuniting with his/her owner!
+
+
+## Getting Started
+
+When looking to see if anyone has posted in your area, simply time in your zip code and all related posts to that zip code will render. When looking to add a found pet, or reporting a lost pet, simply click "Create a lost or found post!"
