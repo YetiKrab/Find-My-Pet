@@ -42,7 +42,7 @@ function PostInput(props){
               <input id = "postBar" onChange={e => props.updateContent(e.target.value)} placeholder = "Please tell us who you found or are looking for!" type="text" size = "118"></input>
             </div>
             
-            <button type="submit" id="postbtn" onClick={() => addPost()}>Create a Lost or Found Post!!!</button> 
+            <button type="submit" id="postbtn" onClick={() => addPost()}>Create a Lost or Found Post!</button> 
 
      </div>
 
